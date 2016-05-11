@@ -466,93 +466,30 @@ th {
   content: "\e615"; }
 
 /* General Styles */
+.container .linkOut {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  text-align: right;
+  background-color: #1e1e1e;
+  color: #daa520;
+  z-index: 105;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none; }
+  .container .linkOut:hover {
+    background-color: #daa520;
+    color: #1e1e1e; }
+
 .container .mapContainer {
   width: 100%; }
   .container .mapContainer p {
     font-family: "Lato", sans-serif;
     font-size: 16px;
-    margin: 0; }
-    @media (max-width: 600px) {
-      .container .mapContainer p {
-        font-size: 14px; } }
-  .container .mapContainer .overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding-right: 240px;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 999; }
-    @media (max-width: 600px) {
-      .container .mapContainer .overlay {
-        padding: 0; } }
-    .container .mapContainer .overlay .overlayTextContainer {
-      position: absolute;
-      top: 200px;
-      padding-right: 230px; }
-      @media (max-width: 600px) {
-        .container .mapContainer .overlay .overlayTextContainer {
-          top: 50px;
-          padding: 0; } }
-      .container .mapContainer .overlay .overlayTextContainer .overlayHeadline {
-        margin: 10px 0;
-        padding: 10px;
-        font-size: 63px;
-        background-color: #daa520; }
-        .container .mapContainer .overlay .overlayTextContainer .overlayHeadline--1 {
-          float: left; }
-        .container .mapContainer .overlay .overlayTextContainer .overlayHeadline--2 {
-          float: right; }
-        @media (max-width: 888px) {
-          .container .mapContainer .overlay .overlayTextContainer .overlayHeadline {
-            font-size: 48px; } }
-        @media (max-width: 768px) {
-          .container .mapContainer .overlay .overlayTextContainer .overlayHeadline {
-            font-size: 36px; } }
-        @media (max-width: 600px) {
-          .container .mapContainer .overlay .overlayTextContainer .overlayHeadline {
-            font-size: 24px;
-            margin: 5px 0;
-            padding: 5px; }
-            .container .mapContainer .overlay .overlayTextContainer .overlayHeadline--2 {
-              float: left; } }
-      .container .mapContainer .overlay .overlayTextContainer .overlaySubhead {
-        margin: 10px 0;
-        padding: 7px;
-        font-size: 24px;
-        font-style: italic;
-        background-color: rgba(155, 155, 155, 0.3);
-        float: right;
-        clear: both;
-        color: white; }
-        @media (max-width: 888px) {
-          .container .mapContainer .overlay .overlayTextContainer .overlaySubhead {
-            font-size: 18px; } }
-        @media (max-width: 768px) {
-          .container .mapContainer .overlay .overlayTextContainer .overlaySubhead {
-            font-size: 12px; } }
-    .container .mapContainer .overlay .arrowsContainer {
-      display: inline-block;
-      float: right; }
-      .container .mapContainer .overlay .arrowsContainer .arrow {
-        margin-top: 11px;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 5px;
-        text-align: right; }
-        .container .mapContainer .overlay .arrowsContainer .arrow:last-child {
-          text-align: center; }
-        .container .mapContainer .overlay .arrowsContainer .arrow p {
-          display: inline-block;
-          font-family: "Lato", sans-serif;
-          color: white;
-          text-transform: uppercase; }
-        .container .mapContainer .overlay .arrowsContainer .arrow img {
-          height: 12px;
-          margin-left: 5px; }
-      @media (max-width: 600px) {
-        .container .mapContainer .overlay .arrowsContainer {
-          display: none; } }
+    margin: 0;
+    font-size: 14px; }
   .container .mapContainer #homicideMap.cartodbMap {
     position: absolute;
     top: 0;
@@ -569,77 +506,22 @@ th {
     right: 0;
     padding: 11px;
     background-color: rgba(30, 30, 30, 0.75);
-    text-align: center; }
-    @media (max-width: 600px) {
-      .container .mapContainer .mapHUD {
-        width: 100%;
-        height: auto;
-        min-height: 0;
-        bottom: 0;
-        top: auto;
-        padding: 0;
-        background-color: rgba(30, 30, 30, 0.75); } }
-    .container .mapContainer .mapHUD .mapButtonsContainer {
-      margin-top: 41px;
-      margin-bottom: 11px;
-      border-bottom: 1px dotted #8c8c8c; }
-      @media (max-width: 600px) {
-        .container .mapContainer .mapHUD .mapButtonsContainer {
-          margin: 0;
-          border: 0; }
-          .container .mapContainer .mapHUD .mapButtonsContainer::after {
-            clear: both;
-            content: "";
-            display: table; } }
-      .container .mapContainer .mapHUD .mapButtonsContainer .mobileDirections {
-        display: none; }
-        @media (max-width: 600px) {
-          .container .mapContainer .mapHUD .mapButtonsContainer .mobileDirections {
-            position: relative;
-            display: block;
-            width: 80%;
-            margin: 2px auto 0 auto;
-            z-index: 1000; } }
-        .container .mapContainer .mapHUD .mapButtonsContainer .mobileDirections p {
-          color: white;
-          font-weight: bold;
-          text-transform: uppercase; }
-      .container .mapContainer .mapHUD .mapButtonsContainer .mapButton {
-        position: relative;
-        width: 208px;
-        margin: 11px auto;
-        padding: 5px;
-        background-color: white;
-        z-index: 1000; }
-        .container .mapContainer .mapHUD .mapButtonsContainer .mapButton p {
-          color: #8c8c8c;
-          text-align: center;
-          text-transform: uppercase; }
-        .container .mapContainer .mapHUD .mapButtonsContainer .mapButton--nearby p {
-          color: black; }
-        .container .mapContainer .mapHUD .mapButtonsContainer .mapButton--full p {
-          color: black; }
-        @media (max-width: 600px) {
-          .container .mapContainer .mapHUD .mapButtonsContainer .mapButton {
-            display: inline-block;
-            width: 49%;
-            margin: 5px auto; }
-            .container .mapContainer .mapHUD .mapButtonsContainer .mapButton--nearby {
-              float: left; }
-            .container .mapContainer .mapHUD .mapButtonsContainer .mapButton--full {
-              float: right; } }
-      .container .mapContainer .mapHUD .mapButtonsContainer * {
-        cursor: pointer; }
-        .container .mapContainer .mapHUD .mapButtonsContainer *:hover {
-          background-color: #8c8c8c; }
+    text-align: center;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    bottom: 0;
+    top: auto;
+    padding: 0;
+    background-color: rgba(30, 30, 30, 0.75); }
     .container .mapContainer .mapHUD .mapStatsContainer {
-      background-color: white;
-      padding: 5px; }
-      @media (max-width: 600px) {
-        .container .mapContainer .mapHUD .mapStatsContainer::after {
-          clear: both;
-          content: "";
-          display: table; } }
+      padding: 5px;
+      color: white;
+      background-color: #1e1e1e; }
+      .container .mapContainer .mapHUD .mapStatsContainer::after {
+        clear: both;
+        content: "";
+        display: table; }
       .container .mapContainer .mapHUD .mapStatsContainer .mapStatItem__numbers p {
         margin: 5px 0;
         font-weight: bold;
@@ -653,45 +535,20 @@ th {
           background-color: #900020; }
         .container .mapContainer .mapHUD .mapStatsContainer .mapStatItem__numbers p.shootingsNumberWrap {
           background-color: #daa520; }
-        @media (max-width: 600px) {
-          .container .mapContainer .mapHUD .mapStatsContainer .mapStatItem__numbers p.numbersIntro {
-            margin-top: 0; }
-          .container .mapContainer .mapHUD .mapStatsContainer .mapStatItem__numbers p.homicidesNumberWrap, .container .mapContainer .mapHUD .mapStatsContainer .mapStatItem__numbers p.shootingsNumberWrap {
-            display: inline-block;
-            width: 49%;
-            padding: 4px; }
-          .container .mapContainer .mapHUD .mapStatsContainer .mapStatItem__numbers p.homicidesNumberWrap {
-            float: left; }
-          .container .mapContainer .mapHUD .mapStatsContainer .mapStatItem__numbers p.shootingsNumberWrap {
-            float: right; } }
-    .container .mapContainer .mapHUD .share-tools {
-      margin: 10px;
-      font-size: 24px;
-      vertical-align: middle;
-      color: #daa520;
-      text-align: center; }
-      .container .mapContainer .mapHUD .share-tools p {
-        text-transform: uppercase;
-        font-weight: bold; }
-        @media (max-width: 600px) {
-          .container .mapContainer .mapHUD .share-tools p {
-            display: inline-block;
-            margin-right: 10px; } }
-      .container .mapContainer .mapHUD .share-tools span {
-        cursor: pointer;
-        vertical-align: middle;
-        margin: 10px; }
-        .container .mapContainer .mapHUD .share-tools span:hover {
-          color: #900020; }
-      @media (max-width: 600px) {
-        .container .mapContainer .mapHUD .share-tools {
-          font-size: 26px; } }
+        .container .mapContainer .mapHUD .mapStatsContainer .mapStatItem__numbers p.numbersIntro {
+          margin-top: 0; }
+        .container .mapContainer .mapHUD .mapStatsContainer .mapStatItem__numbers p.homicidesNumberWrap, .container .mapContainer .mapHUD .mapStatsContainer .mapStatItem__numbers p.shootingsNumberWrap {
+          display: inline-block;
+          width: 49%;
+          padding: 4px; }
+        .container .mapContainer .mapHUD .mapStatsContainer .mapStatItem__numbers p.homicidesNumberWrap {
+          float: left; }
+        .container .mapContainer .mapHUD .mapStatsContainer .mapStatItem__numbers p.shootingsNumberWrap {
+          float: right; }
     .container .mapContainer .mapHUD .infoboxContainer {
       margin-top: 11px;
-      color: white; }
-      @media (max-width: 600px) {
-        .container .mapContainer .mapHUD .infoboxContainer {
-          display: none; } }
+      color: white;
+      display: none; }
       .container .mapContainer .mapHUD .infoboxContainer .infobox {
         color: black;
         margin: 10px 0; }
@@ -707,41 +564,3 @@ th {
           color: #900020; }
         .container .mapContainer .mapHUD .infoboxContainer .infobox--shootings p:first-child {
           color: #daa520; }
-    .container .mapContainer .mapHUD .mobileFooter {
-      display: none; }
-      @media (max-width: 600px) {
-        .container .mapContainer .mapHUD .mobileFooter {
-          display: block;
-          background-color: #1e1e1e;
-          color: #daa520;
-          padding: 3px 0;
-          font-size: 12px;
-          font-family: "Lato", sans-serif;
-          cursor: pointer; } }
-  .container .mapContainer footer {
-    position: absolute;
-    bottom: 7px;
-    right: 0;
-    width: 219px;
-    text-align: left; }
-    .container .mapContainer footer .wrapper p {
-      font-size: 12px;
-      font-family: "Lato", sans-serif;
-      color: white; }
-      .container .mapContainer footer .wrapper p a {
-        text-decoration: none;
-        color: #daa520; }
-    @media (max-width: 600px) {
-      .container .mapContainer footer {
-        display: none;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(30, 30, 30, 0.75); }
-        .container .mapContainer footer .wrapper {
-          position: absolute;
-          top: 30%;
-          width: 100%;
-          margin: 0 auto;
-          text-align: center; } }

@@ -1,5 +1,5 @@
-- var datalink = "http://data.baltimoresun.com/jin/homicides-near-you/"
-- var datalink = ""
+- var datalink = "http://data.baltimoresun.com/jin/blurb-bmore-shootings-near-you/"
+//- var datalink = ""
 
 doctype html
 //if lt IE 7
@@ -9,7 +9,7 @@ doctype html
 //if IE 8
 	<html class="no-js lt-ie9">
 
-html(class="no-js", lang="en")
+html(data-lat="39.289156", data-lon="-76.593420" class="no-js", lang="en")
 	head
 		//Basic page needs
 		meta(charset="utf-8")
@@ -38,65 +38,20 @@ html(class="no-js", lang="en")
 		meta(name="twitter:domain", content="baltimoresun.com")
 
 	body
-		//- #tophat
-			.group
-			#logo
-				a(href="http://www.baltimoresun.com")
-					img(src="#{datalink}images/baltimore-sun-logo-white.png" border="0")
-			.tophat-share-tools
-				span.icon-facebook
-				span.icon-twitter
 		.container
+			a.linkOut(href="#") See the full map here.
 			.mapContainer
-				.overlay
-					.overlayTextContainer
-						h2.overlayHeadline.overlayHeadline--1 How violent is your 
-						h2.overlayHeadline.overlayHeadline--2 neighborhood?
-						h2.overlaySubhead Data from 2013 - Current. Last updated 01/01/16.
-					.arrowsContainer
-						.arrow 
-							p Enter your address
-							img.arrowImg(src="#{datalink}images/arrow.png")
-						.arrow 
-							p See results near you
-							img.arrowImg(src="#{datalink}images/arrow.png")
-						.arrow 
-							p View the full map
-							img.arrowImg(src="#{datalink}images/arrow.png")
-						.arrow 
-							p Or click on the map
 				#homicideMap.cartodbMap
 				.mapHUD
-					.mapButtonsContainer
-						.mobileDirections
-							p Click and drag on the map
-							p or use the buttons below
-						.mapButton.mapButton--nearby
-							p Locate me
-						.mapButton.mapButton--full
-							p View full map
 					.mapStatsContainer
 						.mapStatItem.mapStatItem__numbers
-							p.numbersIntro Within Baltimore:
+							p.numbersIntro Within one mile:
 							p.homicidesNumberWrap #[span.homicidesNumber 0] homicides
 							p.shootingsNumberWrap #[span.shootingsNumber 0] shootings
-					.share-tools
-						p.sharetext Share this statistic:
-						span.icon.icon-facebook
-						span.icon.icon-twitter
 					.infoboxContainer
 						p Hover over a point for details on the incident
 						.infobox.infobox--homicides
 						.infobox.infobox--shootings
-					.mobileFooter About this interactive
-				footer
-					.wrapper
-						p.inspired Inspired by 
-							a(href="http://www.thetrace.org/2015/12/gun-deaths-interactive-map-2015/" target="_blank") The Trace
-						p.source Source: 							
-							a(href="https://data.baltimorecity.gov/Public-Safety/BPD-Part-1-Victim-Based-Crime-Data/wsfq-mvij/" target="_blank") Open Baltimore
-						p.credit Design by Emma Patti Harris
-						p.credit Development by Jin Bae Kim
 		//Fonts
 		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Old+Standard+TT|Lato|Montserrat")
 		//CSS
