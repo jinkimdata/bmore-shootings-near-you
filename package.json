@@ -1,7 +1,7 @@
 {
-  "name": "bmore-shootings-near-you",
+  "name": "blurb-bmore-shootings-near-you",
   "version": "1.0.0",
-  "description": "bmore-shootings-near-you",
+  "description": "blurb-bmore-shootings-near-you",
   "main": "index.js",
   "scripts": {
     "jade": "jade  -P -p src/index.jade < src/index.jade > dist/index.html",
@@ -27,15 +27,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jinkimdata/bmore-shootings-near-you.git"
+    "url": "git+https://github.com/jinkimdata/blurb-bmore-shootings-near-you.git"
   },
   "keywords": [],
   "author": "Jin Bae Kim",
   "license": "",
   "bugs": {
-    "url": "https://github.com/jinkimdata/bmore-shootings-near-you/issues"
+    "url": "https://github.com/jinkimdata/blurb-bmore-shootings-near-you/issues"
   },
-  "homepage": "https://github.com/jinkimdata/bmore-shootings-near-you#readme",
+  "homepage": "https://github.com/jinkimdata/blurb-bmore-shootings-near-you#readme",
   "devDependencies": {
     "browser-sync": "latest",
     "eslint": "latest",
