@@ -52,6 +52,7 @@ html(class="no-js", lang="en")
 					.overlayTextContainer
 						h2.overlayHeadline.overlayHeadline--1 How violent is your 
 						h2.overlayHeadline.overlayHeadline--2 neighborhood?
+						h2.overlaySubhead Data from 2013 - Current. Last updated 01/01/16.
 					.arrowsContainer
 						.arrow 
 							p Enter your address
@@ -64,8 +65,6 @@ html(class="no-js", lang="en")
 							img.arrowImg(src="#{datalink}images/arrow.png")
 						.arrow 
 							p Or click on the map
-				.disclaimerOverlay
-					p 
 				#homicideMap.cartodbMap
 				.mapHUD
 					.mapButtonsContainer
@@ -89,6 +88,15 @@ html(class="no-js", lang="en")
 						p Hover over a point for details on the incident
 						.infobox.infobox--homicides
 						.infobox.infobox--shootings
+					.mobileFooter About this interactive
+				footer
+					.wrapper
+						p.inspired Inspired by 
+							a(href="http://www.thetrace.org/2015/12/gun-deaths-interactive-map-2015/" target="_blank") The Trace
+						p.source Source: 							
+							a(href="https://data.baltimorecity.gov/Public-Safety/BPD-Part-1-Victim-Based-Crime-Data/wsfq-mvij/" target="_blank") Open Baltimore
+						p.credit Design by Emma Patti Harris
+						p.credit Development by Jin Bae Kim
 		//Fonts
 		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Old+Standard+TT|Lato|Montserrat")
 		//CSS

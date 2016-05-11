@@ -6,49 +6,32 @@ var bmoreShootings = {
 	},
 	share: function(){
 		$(".icon-twitter").on("click", function(){
-			var area;
-			var stats = getStats();
-			if (stats[2] == true) {
-				area = "in Baltimore."
-			} else if (stats[2] == false) {
-				area = "within one mile of me."
-			};
-			var tweet = "Since 2013, there have been "+
-			stats[0]+" shootings and "+stats[1]+
-			" homicides " + area; //Tweet text
+			var tweet = getSocialLang();
 			var url = "http://data.baltimoresun.com/jin/homicides-near-you"; //Interactive URL
 			var twitter_url = "https://twitter.com/intent/tweet?text="+tweet+"&url="+url+"&tw_p=tweetbutton";
 			window.open(twitter_url, 'mywin','left=200,top=200,width=500,height=300,toolbar=1,resizable=0'); return false;
 		});
 		$(".icon-facebook").on("click", function(){
-			var area;
-			var stats = getStats();
-			if (stats[2] == true) {
-				area = "in Baltimore."
-			} else if (stats[2] == false) {
-				area = "within one mile of me."
-			};
 			var picture = "http://data.baltimoresun.com/jin/homicides-near-you/images/thumb.png"; //Picture URL
 			var title = "How violent is your neighborhood?"; //Post title
-			var description = "Since 2013, there have been "+
-			stats[0]+" shootings and "+stats[1]+
-			" homicides " + area; //Post description
+			var description = getSocialLang();
 			var url = "http://data.baltimoresun.com/jin/homicides-near-you"; //Interactive URL
 	    	var facebook_url = "https://www.facebook.com/dialog/feed?display=popup&app_id=310302989040998&link="+
 	    	url+"&picture="+picture+"&name="+title+"&description="+description+
 	    	"&redirect_uri=http://www.facebook.com";    		
 			window.open(facebook_url, 'mywin','left=200,top=200,width=500,height=300,toolbar=1,resizable=0'); return false;
 		});
-		function getStats() {
+		function getSocialLang() {
+			var area;			
 			var results = [];
 			results[0] = $('.shootingsNumber').text();
-			results[1] = $('.homicidesNumber').text();
+			results[1] = $('.homicidesNumber').text();			
 			if ($('.numbersIntro').text().toString().toLowerCase().indexOf("baltimore") >= 0) {
-				results[2] = true;
+				area = "in Baltimore."
 			} else {
-				results[2] = false;
+				area = "within one mile of me."
 			};
-			return results;
+			return "Since 2013, there have been "+results[0]+" shootings and "+results[1]+" homicides " + area;
 		};
 	},
 	createMap: function() {
@@ -313,6 +296,12 @@ var bmoreShootings = {
 	    var tablet = window.matchMedia("only screen and (max-width: 760px)");
 	    if (tablet.matches || isMobile) {
 			$('.infoboxContainer').hide();
+		    $('.mobileFooter').on('click',function(){
+		    	$('footer').fadeIn('fast');
+		    });
+	    	$('footer').on('click',function(){ 
+	    		$('footer').fadeOut('fast');
+	    	});
 	    };
 	}
 }

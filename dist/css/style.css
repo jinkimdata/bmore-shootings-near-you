@@ -517,6 +517,21 @@ th {
             padding: 5px; }
             .container .mapContainer .overlay .overlayTextContainer .overlayHeadline--2 {
               float: left; } }
+      .container .mapContainer .overlay .overlayTextContainer .overlaySubhead {
+        margin: 10px 0;
+        padding: 7px;
+        font-size: 24px;
+        font-style: italic;
+        background-color: rgba(155, 155, 155, 0.3);
+        float: right;
+        clear: both;
+        color: white; }
+        @media (max-width: 888px) {
+          .container .mapContainer .overlay .overlayTextContainer .overlaySubhead {
+            font-size: 18px; } }
+        @media (max-width: 768px) {
+          .container .mapContainer .overlay .overlayTextContainer .overlaySubhead {
+            font-size: 12px; } }
     .container .mapContainer .overlay .arrowsContainer {
       display: inline-block;
       float: right; }
@@ -692,3 +707,41 @@ th {
           color: #900020; }
         .container .mapContainer .mapHUD .infoboxContainer .infobox--shootings p:first-child {
           color: #daa520; }
+    .container .mapContainer .mapHUD .mobileFooter {
+      display: none; }
+      @media (max-width: 600px) {
+        .container .mapContainer .mapHUD .mobileFooter {
+          display: block;
+          background-color: #1e1e1e;
+          color: #daa520;
+          padding: 3px 0;
+          font-size: 12px;
+          font-family: "Lato", sans-serif;
+          cursor: pointer; } }
+  .container .mapContainer footer {
+    position: absolute;
+    bottom: 7px;
+    right: 0;
+    width: 219px;
+    text-align: left; }
+    .container .mapContainer footer .wrapper p {
+      font-size: 12px;
+      font-family: "Lato", sans-serif;
+      color: white; }
+      .container .mapContainer footer .wrapper p a {
+        text-decoration: none;
+        color: #daa520; }
+    @media (max-width: 600px) {
+      .container .mapContainer footer {
+        display: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(30, 30, 30, 0.75); }
+        .container .mapContainer footer .wrapper {
+          position: absolute;
+          top: 30%;
+          width: 100%;
+          margin: 0 auto;
+          text-align: center; } }
