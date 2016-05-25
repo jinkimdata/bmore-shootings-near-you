@@ -1,67 +1,47 @@
-- var datalink = "http://data.baltimoresun.com/jin/blurb-bmore-shootings-near-you/"
-//- var datalink = ""
+- var link = "http://data.baltimoresun.com/jin/blurb-shootings-near-you/"
+//- var link = ""
 
 doctype html
-//if lt IE 7
-	<html class="no-js lt-ie9 lt-ie8 lt-ie7">
-//if IE 7
-	<html class="no-js lt-ie9 lt-ie8">
-//if IE 8
-	<html class="no-js lt-ie9">
-
+//
+	How to use this blurb:
+	1. Clone this blurb
+	2. Find your lat/lon coordinates. You can do this in Google Maps.
+	3. Copy the lat/lon coordinates below in the "data-lat" and "data-lon" attributes.
 html(data-lat="39.289156", data-lon="-76.593420" class="no-js", lang="en")
 	head
 		//Basic page needs
 		meta(charset="utf-8")
 		title How violent is your neighborhood?
-		meta(name="description", content="Shootings and homicides in Baltimore")
+		meta(name="description", content="Shootings and homicides in Maryland")
 		meta(name="author", content="Jin Bae Kim")
-
 		//Mobile Specific Metas
 		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
-
-		//Facebook Stuff
-		meta(property="og:title", content="How violent is your neighborhood?")
-		meta(property="og:url", content="#{datalink}")
-		meta(property="og:image", content="#{datalink}images/thumb.png")
-		meta(property="og:site_name", content="The Baltimore Sun")
-		meta(property="og:description", content="Shootings and homicides in Baltimore")
-		meta(property="fb:app_id", content="310302989040998")
-
-		//Twitter Stuff
-		meta(name="twitter:card", content="summary")
-		meta(name="twitter:site", content="@baltimoresun")
-		meta(name="twitter:creator", content="@baltsundata")
-		meta(name="twitter:title", content="How violent is your neighborhood?")
-		meta(name="twitter:description", content="Shootings and homicides in Baltimore")
-		meta(name="twitter:image", content="#{datalink}images/thumb.png")
-		meta(name="twitter:domain", content="baltimoresun.com")
-
 	body
 		.container
-			a.linkOut(href="#") See the full map here.
-			.mapContainer
+			a.linkOut(href="http://data.baltimoresun.com/news/shootings-near-you/" target="_blank") See the full map.
+			.mapContainer				
 				#homicideMap.cartodbMap
 				.mapHUD
 					.mapStatsContainer
 						.mapStatItem.mapStatItem__numbers
-							p.numbersIntro Within one mile:
-							p.homicidesNumberWrap #[span.homicidesNumber 0] homicides
-							p.shootingsNumberWrap #[span.shootingsNumber 0] shootings
-					.infoboxContainer
-						p Hover over a point for details on the incident
-						.infobox.infobox--homicides
-						.infobox.infobox--shootings
+							p.numbersIntro 
+								span.withinMile Within one mile:
+								br
+							.numbersWrapper
+								p.shootingsNumberWrap
+									span.incidentsNumber 0
+									span  shooting
+									span.incidentsPlural s
+								p.homicidesNumberWrap #[span.homicidesNumber 0] dead
+							p.dataRange Data from 2015-current
 		//Fonts
 		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Old+Standard+TT|Lato|Montserrat")
 		//CSS
-		link(rel="stylesheet" href="#{datalink}css/cartodb.css")
-		link(rel="stylesheet" href="#{datalink}css/Control.OSMGeocoder.css")
-		link(rel="stylesheet", type="text/css", href="#{datalink}css/style.css")
-		//Javascript
-		script(src="#{datalink}js/min/jquery-1.10.2.min.js")
-		//- script(src="#{datalink}js/min/modernizr.js")
-		script(src="#{datalink}js/min/cartodb.js")
-		script(src="#{datalink}js/min/Control.OSMGeocoder.js")
-		script(src="#{datalink}js/app.js")
-		//- script(src="#{datalink}js/min/app.min.js")
+		link(rel="stylesheet" href="#{link}css/cartodb.css")
+		link(rel="stylesheet", type="text/css", href="#{link}css/style.css")
+		//app
+		script(src="#{link}js/min/jquery-1.10.2.min.js")
+		script(src="#{link}js/min/cartodb.js")
+		script(src="#{link}js/min/Control.OSMGeocoder.js")
+		script(src="#{link}js/min/app.min.js")
+

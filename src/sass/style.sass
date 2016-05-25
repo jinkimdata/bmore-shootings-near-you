@@ -14,7 +14,7 @@
 		top: 0
 		right: 0
 		padding: 10px
-		text-align: right
+		text-align: center
 		background-color: $nearblack
 		color: $goldenrod
 		z-index: 105
@@ -61,52 +61,35 @@
 				padding: 5px
 				color: white
 				background-color: $nearblack	
-				+clearfix
+				+clearfix				
 				.mapStatItem
 					&__numbers
+						.numbersWrapper
+							background-color: $goldenrod
+							padding: 10px
 						p
-							margin: 5px 0
+							margin: 0
 							font-weight: bold
 							text-transform: uppercase
-							span.homicidesNumber
-							span.shootingsNumber
-							&.numbersIntro
-								margin-top: 10px
-							&.homicidesNumberWrap, &.shootingsNumberWrap
-								color: white
-								padding: 8px
-							&.homicidesNumberWrap
-								background-color: $burgundy
-							&.shootingsNumberWrap
-								background-color: $goldenrod
-							&.numbersIntro
+						.numbersIntro
+							margin: 10px 0
+						.homicidesNumberWrap, .shootingsNumberWrap
+							padding: 8px
+						.shootingsNumberWrap
+							color: $nearblack
+						.homicidesNumberWrap
+							background-color: $burgundy
+						@media (max-width: $sm1)
+							.numbersIntro
 								margin-top: 0
-							&.homicidesNumberWrap, &.shootingsNumberWrap
-								display: inline-block
-								width: 49%
+								.withinMile br
+									display: none
+							.homicidesNumberWrap, .shootingsNumberWrap
+								display: block
+								width: 100%
 								padding: 4px
-							&.homicidesNumberWrap
-								float: left
-							&.shootingsNumberWrap
-								float: right
-			.infoboxContainer
-				margin-top: 11px
-				color: white
-				display: none
-				.infobox
-					color: black
-					margin: 10px 0
-					p
-						padding: 1px 0
-					.cartodb-infobox
-						padding: 10px
-						height: 100%
-						background: white
-						text-align: left
-						z-index: 105
-					&--homicides
-						p:first-child
-							color: $burgundy
-					&--shootings
-						p:first-child
-							color: $goldenrod
+								margin: 0 auto
+						.dataRange
+							text-transform: none
+							font-weight: normal
+							margin-top: 3px
